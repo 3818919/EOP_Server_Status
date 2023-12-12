@@ -1,0 +1,22 @@
+{
+    "username": "{}",
+    "content": "{}",
+    "embeds": [
+        {
+            "title": "{}",
+            "description": "**{}**",
+            "color": 16711680, 
+            "author": {
+                "name": "Connection Lost",
+                "icon_url": "https://cdn.discordapp.com/attachments/1124289353917669438/1125309511561908234/offline.gif"
+            },
+            "footer": {
+                "text": "{}"
+            },
+            "thumbnail": {
+                "url": "{}"
+            }
+        }
+
+    ]
+}

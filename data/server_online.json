@@ -1,0 +1,21 @@
+{
+    "username": "{}",
+    "content": "{}",
+    "embeds": [
+        {
+            "title": "{}",
+            "description": "**{}**",
+            "color": 65280, 
+            "author": {
+                "name": "Connection Established",
+                "icon_url": "https://cdn.discordapp.com/attachments/1124289353917669438/1125316008442335314/online-2t.gif"
+            },
+            "footer": {
+                "text": "{}"
+            },
+            "thumbnail": {
+                "url": "{}"
+            }
+        }
+    ]
+}
