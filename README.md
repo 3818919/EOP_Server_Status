@@ -41,7 +41,7 @@ To obtain a discord webhook URL go to `discorder server settings > Intergrations
 ![Webhook Setup](https://cdn.discordapp.com/attachments/1100040855626190848/1183989995195875438/Screenshot_2023-12-12_at_2.33.24_pm.png)
 
 ## Running the bot
-The bot runs using Python (Built on Python 3.12.1) and requires:
+The bot runs using [Python](https://www.python.org/downloads/) (Built on Python 3.12.1) and requires:
 ```
 pip install configparser
 ```
