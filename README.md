@@ -1,50 +1,51 @@
-# Server_Status
-Send discord server status messages when a server goes either online or offline
+# Server Status Alert Bot for Discord
 
-## Config File
-Use the config.ini file to change the properties of your discord alerts, the properties you can change are:
-### Server Name
-The name of your private EO server
-### Server IP
-The IP address of your private EO server
-### Server Port
-The port number of your private EO server
-### Server Logo
-The logo of your private EO server or the logo of your discord server
-### Discord Role
-The discord role used to ping members. By default this is set to @here, to use a custom role you will need to:
- 1. Activate discord developer mode in `Discord Settings > Advanced > Developer Mode`
- 2. In the Member Side Panel of your server > Left Click a Member
- 3. Right click one of their roles
- 4. Left click `Copy Role ID`
- 5. Replace @here in the config.ini with `<&ROLEID>` (eg. `<&123456789>`
-### Online Title
-The title displayed in the discord alert (eg. `Server Online`)
-### Online Message
-The message displayed in the discord alert (eg. `I have checked and it appears your server is online`)
-### Offline Title
-The title displayed in the discord alert (eg. `Server Offline`)
-### Offline Message
-The message displayed in the discord alert (eg. `I have checked and it appears your server is offline`)
-### Webhook URL
-The webhook URL which the bot will send the alert
-### Footer
-The footer text displayed at the bottom of the alert (eg. Provided by Vexx)
-### Timer
-How many seconds the bot will wait before checking the server status again (default 30 seconds)
+This bot sends alerts on Discord about the status of a server, indicating when it goes online or offline.
+
+## Configuration
+
+To customize your alerts, use the `config.ini` file. You can modify the following properties:
+
+### Server Details
+- **Server Name**: Specify the name of your private EO server.
+- **Server IP**: Enter the IP address of your server.
+- **Server Port**: Define the port number your server uses.
+- **Server Logo**: Choose a logo, either from your EO server or Discord server.
+
+### Discord Notifications
+- **Discord Role**: Set the Discord role for pinging members. Default is `@here`. For custom roles:
+  1. Enable Developer Mode: `Discord Settings > Advanced > Developer Mode`.
+  2. On your server's Member Side Panel, left-click a member.
+  3. Right-click one of their roles.
+  4. Select `Copy Role ID`.
+  5. Replace `@here` in `config.ini` with `<&ROLEID>` (e.g., `<&123456789>`).
+
+### Alert Customization
+- **Online Title**: Title for online status alerts (e.g., `Server Online`).
+- **Online Message**: Message for online status (e.g., `Server is currently online`).
+- **Offline Title**: Title for offline status alerts (e.g., `Server Offline`).
+- **Offline Message**: Message for offline status (e.g., `Server is currently offline`).
+- **Webhook URL**: Your Discord webhook URL for sending alerts.
+- **Footer**: Custom footer text for alerts (e.g., `Provided by Vexx`).
+- **Timer**: Interval in seconds for status checks (default is 30 seconds).
 
 ![Discord Alert](https://cdn.discordapp.com/attachments/1100040855626190848/1183988934900973578/Screenshot_2023-12-12_at_2.29.11_pm.png)
 
-## Discord Webhook
-To obtain a discord webhook URL go to `discorder server settings > Intergrations > Webhooks` and make a new webhook. Give the webhook a name, set the channel it will post messages (or alerts) and give it an image/logo. Click `Copy Webhook` and paste that URL into `config.ini` after `WEBHOOK = https:your-discord-webhook.com`
-![Server Settings Intergrations](https://cdn.discordapp.com/attachments/1100040855626190848/1183989510862819451/Screenshot_2023-12-12_at_2.31.30_pm.png)
+## Setting Up Discord Webhook
+
+To set up a Discord webhook:
+1. Navigate to `Server Settings > Integrations > Webhooks`.
+2. Create a new webhook, name it, select a posting channel, and set an image/logo.
+3. Click `Copy Webhook` and paste the URL into `config.ini` after `WEBHOOK = https://your-discord-webhook.com`.
+
+![Server Settings Integrations](https://cdn.discordapp.com/attachments/1100040855626190848/1183989510862819451/Screenshot_2023-12-12_at_2.31.30_pm.png)
 ![Webhook Setup](https://cdn.discordapp.com/attachments/1100040855626190848/1183989995195875438/Screenshot_2023-12-12_at_2.33.24_pm.png)
 
-## Running the bot
-The bot runs using [Python](https://www.python.org/downloads/) (Built on Python 3.12.1) and requires:
-```
+## Running the Bot
+
+The bot is built with Python 3.12.1. Install the required packages using pip:
+
+```bash
 pip install configparser
-```
-```
 pip install requests==2.6.0
 ```
